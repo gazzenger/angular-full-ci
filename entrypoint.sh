@@ -29,6 +29,4 @@ echo "\n**Building Project**\n"
 ng build --prod
 
 echo "\n**Running Unit Tests**\n"
-npm $testcommand
-
-exit 0
+npm $testcommand || true
