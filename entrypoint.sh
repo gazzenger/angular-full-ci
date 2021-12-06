@@ -1,5 +1,7 @@
 #!/bin/sh
 
+set -e
+
 testcommand="$INPUT_TESTCOMMAND"
 mocha="$INPUT_MOCHA"
 working_dir="$INPUT_WORKING_DIRECTORY"
