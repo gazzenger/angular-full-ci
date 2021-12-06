@@ -5,6 +5,10 @@ branding:
   icon: 'terminal'
   color: 'red'
 inputs:
+  audit_level:
+    description: info|low|moderate|high|critical|none
+    required: true
+    default: critical
   testcommand:
     description: Command to run tests on your project, do not prepend with "npm", it is already included.
     required: true

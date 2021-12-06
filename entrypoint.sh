@@ -2,6 +2,7 @@
 
 set -e
 
+audit_level="$INPUT_AUDIT_LEVEL"
 testcommand="$INPUT_TESTCOMMAND"
 mocha="$INPUT_MOCHA"
 working_dir="$INPUT_WORKING_DIRECTORY"
@@ -11,7 +12,7 @@ if [ -n "$working_dir" ]; then
 fi
 
 echo "\n**Auditing Packages**\n"
-npm audit
+npm audit --audit-level "$audit_level"
 
 echo "\n**Installing Angular CLI**\n"
 npm install -g @angular/cli --latest
