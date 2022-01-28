@@ -14,11 +14,6 @@ fi
 echo "\n**Auditing Packages**\n"
 npm audit --audit-level "$audit_level"
 
-echo "\n**Installing Angular CLI**\n"
-npm install -g @angular/cli --latest
-npm install -g @angular-devkit/build-angular --latest
-ng config -g cli.warnings.versionMismatch false
-
 if [ "$mocha" = "true" ]; then
     npm i mocha
 fi
@@ -27,10 +22,10 @@ echo "\n**Installing Dependencies**\n"
 npm install
 
 echo "\n**Linting Code**\n"
-ng lint
+npm run lint
 
 echo "\n**Building Project**\n"
-ng build --prod
+npm run build --prod
 
 echo "\n**Running Unit Tests**\n"
 npm $testcommand
