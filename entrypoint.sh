@@ -26,7 +26,7 @@ if [ "$mocha" = "true" ]; then
 fi
 
 echo "\n**Installing Dependencies**\n"
-npm install
+npm install --fetch-timeout=600000
 
 echo "\n**Linting Code**\n"
 npm run lint
