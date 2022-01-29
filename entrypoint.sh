@@ -11,6 +11,9 @@ if [ -n "$working_dir" ]; then
     cd $working_dir
 fi
 
+echo "\n**Upgrading npm**\n"
+npm install -g npm@latest
+
 echo "\n**Auditing Packages**\n"
 npm audit --audit-level "$audit_level"
 
