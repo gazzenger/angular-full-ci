@@ -11,6 +11,10 @@ if [ -n "$working_dir" ]; then
     cd $working_dir
 fi
 
+npm config set fetch-retry-mintimeout 100000
+npm config set fetch-retry-maxtimeout 600000
+npm config set cache-min 3600
+
 echo "\n**Upgrading npm**\n"
 npm install -g npm@latest
 
