@@ -9,6 +9,10 @@ inputs:
     description: info|low|moderate|high|critical|none
     required: true
     default: critical
+  buildcommand:
+    description: Command to build your project, do not prepend with "npm", it is already included.
+    default: run build
+    required: false
   testcommand:
     description: Command to run tests on your project, do not prepend with "npm", it is already included.
     required: true

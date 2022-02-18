@@ -3,6 +3,7 @@
 set -e
 
 audit_level="$INPUT_AUDIT_LEVEL"
+buildcommand="$INPUT_BUILDCOMMAND"
 testcommand="$INPUT_TESTCOMMAND"
 mocha="$INPUT_MOCHA"
 working_dir="$INPUT_WORKING_DIRECTORY"
@@ -32,7 +33,7 @@ echo "\n**Linting Code**\n"
 npm run lint
 
 echo "\n**Building Project**\n"
-npm run build --prod
+npm $buildcommand
 
 echo "\n**Running Unit Tests**\n"
 npm $testcommand
