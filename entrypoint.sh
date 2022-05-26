@@ -20,7 +20,7 @@ echo "\n**Upgrading npm**\n"
 npm install -g npm@latest
 
 echo "\n**Auditing Packages**\n"
-npm audit --audit-level "$audit_level"
+npm audit --omit dev  --audit-level "$audit_level"
 
 if [ "$mocha" = "true" ]; then
     npm i mocha
