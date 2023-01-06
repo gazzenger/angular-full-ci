@@ -18,6 +18,9 @@ npm config set cache-min 3600
 
 echo "\n**Upgrading npm**\n"
 npm install -g npm@latest
+npm install -g n
+n latest
+n prune
 
 echo "\n**Auditing Packages**\n"
 npm audit --omit dev  --audit-level "$audit_level"
