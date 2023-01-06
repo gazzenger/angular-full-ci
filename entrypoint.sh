@@ -19,7 +19,7 @@ npm config set cache-min 3600
 echo "\n**Upgrading npm**\n"
 npm install -g npm@latest
 npm install -g n
-n latest
+n 16.14.0
 n prune
 
 echo "\n**Auditing Packages**\n"
