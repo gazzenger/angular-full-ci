@@ -22,6 +22,9 @@ npm install -g n
 n 16.14.0
 n prune
 
+# https://github.com/npm/cli/issues/5114
+sudo chown -R 1001:123 "/github/home/.npm"
+
 echo "\n**Auditing Packages**\n"
 npm audit --omit dev  --audit-level "$audit_level"
 
