@@ -17,7 +17,7 @@ npm config set fetch-retry-maxtimeout 600000
 npm config set cache-min 3600
 
 echo "\n**Upgrading npm**\n"
-npm install -g npm@latest
+npm install -g npm@8.3.1
 npm install -g n
 n 16.14.0
 n prune
