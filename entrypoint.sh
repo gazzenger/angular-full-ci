@@ -16,14 +16,15 @@ npm config set fetch-retry-mintimeout 100000
 npm config set fetch-retry-maxtimeout 600000
 npm config set cache-min 3600
 
+# https://github.com/npm/cli/issues/5114
+chown -R 1001:123 "/github/home/.npm"
+
 echo "\n**Upgrading npm**\n"
 npm install -g npm@8.3.1
 npm install -g n
 n 16.14.0
 n prune
 
-# https://github.com/npm/cli/issues/5114
-chown -R 1001:123 "/github/home/.npm"
 
 echo "\n**Auditing Packages**\n"
 npm audit --omit dev  --audit-level "$audit_level"
